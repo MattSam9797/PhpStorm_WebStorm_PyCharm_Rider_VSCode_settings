@@ -1,0 +1,174 @@
+{
+	// Place your snippets for javascript here. Each snippet is defined under a snippet name and has a prefix, body and
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"for-of iterator": {
+		"prefix": "fof",
+		"body": [
+			"for(const ${1:item} of ${2:Array}){\n\t$0\n}"
+		],
+		"description": "Array Elements Iterator"
+	},
+	"for loop": {
+		"prefix": "for",
+		"body": [
+			"for(let ${1:i} = 0 ; ${1:i} < ${2:array} ; ${1:i}++){\n\t$0\n}"
+		],
+		"description": "for loop"
+	},
+	"if statement": {
+		"prefix": "if",
+		"body": [
+			"if(${1:comparison}){\n\t$0\n}"
+		],
+		"description": "simple IF statement"
+	},
+	"if-else statement": {
+		"prefix": "ifel",
+		"body": [
+			"if(${1:comparison}){\n\t${2:}\n} else {\n\t$0\n}"
+		],
+		"description": "IF-ELSE statement"
+	},
+	"else statement": {
+		"prefix": "else",
+		"body": [
+			" else {\n\t$0\n}"
+		],
+		"description": "ELSE statement"
+	},
+	"for-if iterator": {
+		"prefix": "fin",
+		"body": [
+			"for(const ${1:key} in ${2:object}){\n\t$0\n}"
+		],
+		"description": "object keys Iterator"
+	},
+	"function": {
+		"prefix": "fn",
+		"body": [
+			"function ${1:name}(${2:parameter}){\n\t$0\n}"
+		],
+		"description": "a normal function"
+	},
+	"function expression": {
+		"prefix": "fx",
+		"body": ["const ${1:name} = (${2:parameter}) => {\n\t$0\n};"],
+		"description": "function expression"
+	},
+	"export": {
+		"prefix": "ex",
+		"body": [
+			"export default ${1:component};"
+		],
+		"description": "export the component"
+	},
+	"onclick": {
+		"prefix": "oc",
+		"body": [
+			"onClick={(event) => ${1:handler}(event,${2:argument})}"
+		],
+		"description": "set onClick event"
+	},
+	"onchange": {
+		"prefix": "og",
+		"body": [
+			"onChange={(event) => ${1:handler}(event,${2:argument})}"
+		],
+		"description": "set onChange event"
+	},
+	"import": {
+		"prefix": "imp",
+		"body": [
+			"import ${1:componentName} from \"${2:library}\";"
+		],
+		"description": "import the component"
+	},
+	"useState": {
+		"prefix": "st",
+		"body": [
+			"const [${1:name}, set${1/(.*)/${1:/capitalize}/}] = useState(\"${3:nameArgument}\");$0"
+		],
+		"description": "declare react State"
+	},
+	"component": {
+		"prefix": "co",
+		"body": [
+			"const ${1:name} = (${2:props}) => {\n\treturn (\n\t\t$0\n\t);\n};"
+		],
+		"description": "react component"
+	},
+	"Query Selector": {
+		"prefix": "dq",
+		"body": [
+			"document.querySelector(\"${1:element}\");\n$0"
+		],
+		"description": "Selector Query one element"
+	},
+	"Query Selector All": {
+		"prefix": "dqa",
+		"body": [
+			"document.querySelectorAll(\"${1:element}\");\n$0"
+		],
+		"description": "Selector Query some element"
+	},
+	"id Selector": {
+		"prefix": "di",
+		"body": [
+			"document.getElementById(\"${1:element}\");\n$0"
+		],
+		"description": "id Selector for one element"
+	},
+	"class Selector": {
+		"prefix": "dc",
+		"body": [
+			"document.getElementsByClassName(\"${1:element}\");\n$0"
+		],
+		"description": "class Selector for some element"
+	},
+	"tag Selector": {
+		"prefix": "dt",
+		"body": [
+			"document.getElementsByTagName(\"${1:element}\");\n$0"
+		],
+		"description": "tag Selector for some element"
+	},
+	"prototype": {
+		"prefix": "pr",
+		"body": [
+			"${1:ConstrucName}.prototype.${2:methodName} = function(${3:parameter}){\n\t$0\n};"
+		],
+		"description": "cunstructor prototype method"
+	},
+	"inheritance methods": {
+		"prefix": "inh",
+		"body": [
+			"${1:childConstructName}.prototype = Object.create(${2:parenConstructName}.prototype);$0"
+		],
+		"description": "inheritance prototype method from other classes"
+	},
+	"class": {
+		"prefix": "cl",
+		"body": [
+			"class ${1:className} {\n\tconstructor(${2:parameter1},${3:parameter2},${4:parameter3}){\n\t\tthis.$2 = $2;\n\t\tthis.$3 = $3;\n\t\tthis.$4 = $4;\n\t}\n\t${5:methodName}(${6:parameter}){\n\t\t$0\n\t}\n}"
+		],
+		"description": "independet class with constructor"
+	},
+	"child class": {
+		"prefix": "clc",
+		"body": [
+			"class ${1:className} extends ${2:parentClass} {\n\tconstructor(${3:parameter1},${4:parameter2},${5:parameter3}){\n\tsuper($3,$4);\n\tthis.$5 = $5;\n\t}\n\t${6:methodName}(${7:parameter}){\n\t\t$0\n\t}\n}"
+		],
+		"description": "'child class' ==> inheritance from other parent class"
+	}
+}
