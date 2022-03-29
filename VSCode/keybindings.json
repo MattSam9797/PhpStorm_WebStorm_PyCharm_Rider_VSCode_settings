@@ -338,5 +338,42 @@
   {
     "key": "alt+g alt+u",
     "command": "git.unstage"
+  },
+  {
+    "key": "f7",
+    "command": "editor.action.marker.nextInFiles",
+    "when": "editorFocus"
+  },
+  {
+    "key": "f8",
+    "command": "-editor.action.marker.nextInFiles",
+    "when": "editorFocus"
+  },
+  {
+    "key": "shift+f8",
+    "command": "quokka.playTraceForwardToBreakpoint",
+    "when": "activeEditor && quokka.isActiveEditorRunningQuokka && quokka.traceBeingNavigated && !inDebugMode && !quokka.isLiveShareClient || activeEditor && quokka.traceBeingNavigated && !inDebugMode && !quokka.isLiveShareClient && resourceScheme == 'quokka-code-timeline'"
+  },
+  {
+    "key": "f8",
+    "command": "workbench.action.debug.continue"
+  },
+  {
+    "key": "f5",
+    "command": "-workbench.action.debug.continue",
+    "when": "debugState == 'stopped'"
+  },
+  {
+    "key": "shift+f9",
+    "command": "-editor.debug.action.toggleInlineBreakpoint",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+f9",
+    "command": "debug.enableOrDisableBreakpoint"
+  },
+  {
+    "key": "shift+f9",
+    "command": "editor.debug.action.conditionalBreakpoint"
   }
 ]
