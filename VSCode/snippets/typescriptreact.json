@@ -12,26 +12,33 @@
 	// 	],
 	// 	"description": "Log output to console"
 	// }
+	"for loop": {
+		"prefix": "fori",
+		"body": [
+			"for(let ${1:i} = 0 ; ${1:i} < ${2:array} ; ${1:i}++){\n\t$0\n}"
+		],
+		"description": "for loop"
+	},
 	"for-of iterator": {
-		"prefix": "fof",
+		"prefix": "forof",
 		"body": [
 			"for(const ${1:item} of ${2:Array}){\n\t$0\n}"
 		],
 		"description": "Array Elements Iterator"
 	},
-	"for loop": {
-		"prefix": "for",
+	"for-in iterator": {
+		"prefix": "forin",
 		"body": [
-			"for(let ${1:i} = 0 ; ${1:i} < ${2:array} ; ${1:i}++){\n\t$0\n}"
+			"for(const ${1:key} in ${2:object}){\n\t$0\n}"
 		],
-		"description": "for loop"
+		"description": "object keys Iterator"
 	},
 	"if statement": {
 		"prefix": "if",
 		"body": [
 			"if(${1:comparison}){\n\t$0\n}"
 		],
-		"description": "simple IF statement"
+		"description": "IF statement"
 	},
 	"if-else statement": {
 		"prefix": "ifel",
@@ -46,13 +53,6 @@
 			" else {\n\t$0\n}"
 		],
 		"description": "ELSE statement"
-	},
-	"for-if iterator": {
-		"prefix": "fin",
-		"body": [
-			"for(const ${1:key} in ${2:object}){\n\t$0\n}"
-		],
-		"description": "object keys Iterator"
 	},
 	"function": {
 		"prefix": "fn",
@@ -149,6 +149,55 @@
 			"${1:ConstrucName}.prototype.${2:methodName} = function(${3:parameter}){\n\t$0\n};"
 		],
 		"description": "cunstructor prototype method"
+	},
+	"log": {
+		"prefix": "log",
+		"body": [
+			"console.log($0)"
+		],
+		"description": "console.log()"
+	},
+	"warn": {
+		"prefix": "warn",
+		"body": [
+			"console.warn($0)"
+		],
+		"description": "console.warn()"
+	},
+	"error": {
+		"prefix": "error",
+		"body": [
+			"console.error($0)"
+		],
+		"description": "console.error()"
+	},
+	"console.log()": {
+		"prefix": "clg",
+		"body": [
+			"console.log(${1:Expression});$0"
+		],
+		"description": "Log Statement"
+	},
+	"console.warn()": {
+		"prefix": "clw",
+		"body": [
+			"console.warn(${1:Expression});$0"
+		],
+		"description": "Warning Statement"
+	},
+	"console.error()": {
+		"prefix": "cle",
+		"body": [
+			"console.error(${1:Expression});$0"
+		],
+		"description": "Error Statement"
+	},
+	"console.dir()": {
+		"prefix": "dir",
+		"body": [
+			"console.dir(${1:Object});$0"
+		],
+		"description": "object Statement"
 	},
 	"inheritance methods": {
 		"prefix": "inh",
