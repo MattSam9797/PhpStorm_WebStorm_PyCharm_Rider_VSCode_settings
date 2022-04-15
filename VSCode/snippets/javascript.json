@@ -12,35 +12,35 @@
   // 	],
   // 	"description": "Log output to console"
   // }
+  "for loop": {
+    "prefix": "fori",
+    "body": ["for (let ${1:i} = 0 ; ${1:i} < ${2:array} ; ${1:i}++){\n\t$0\n}"],
+    "description": "for loop"
+  },
   "for-of iterator": {
-    "prefix": "fof",
-    "body": ["for(const ${1:item} of ${2:Array}){\n\t$0\n}"],
+    "prefix": "forof",
+    "body": ["for (const ${1:item} of ${2:Array}){\n\t$0\n}"],
     "description": "Array Elements Iterator"
   },
-  "for loop": {
-    "prefix": "for",
-    "body": ["for(let ${1:i} = 0 ; ${1:i} < ${2:array} ; ${1:i}++){\n\t$0\n}"],
-    "description": "for loop"
+  "for-in iterator": {
+    "prefix": "forin",
+    "body": ["for (const ${1:key} in ${2:object}){\n\t$0\n}"],
+    "description": "object keys Iterator"
   },
   "if statement": {
     "prefix": "if",
-    "body": ["if(${1:comparison}){\n\t$0\n}"],
-    "description": "simple IF statement"
+    "body": ["if (${1:comparison}){\n\t$0\n}"],
+    "description": "IF statement"
   },
   "if-else statement": {
     "prefix": "ifel",
-    "body": ["if(${1:comparison}){\n\t${2:}\n} else {\n\t$0\n}"],
+    "body": ["if (${1:comparison}){\n\t${2:}\n} else {\n\t$0\n}"],
     "description": "IF-ELSE statement"
   },
   "else statement": {
     "prefix": "else",
     "body": [" else {\n\t$0\n}"],
     "description": "ELSE statement"
-  },
-  "for-if iterator": {
-    "prefix": "fin",
-    "body": ["for(const ${1:key} in ${2:object}){\n\t$0\n}"],
-    "description": "object keys Iterator"
   },
   "function": {
     "prefix": "fn",
@@ -52,6 +52,13 @@
     "body": ["const ${1:name} = (${2:parameter}) => {\n\t$0\n};"],
     "description": "function expression"
   },
+  "export": {
+		"prefix": "ex",
+		"body": [
+			"export default ${1:component};"
+		],
+		"description": "export the component"
+	},
   "Query Selector": {
     "prefix": "dq",
     "body": ["document.querySelector(\"${1:element}\");\n$0"],
@@ -83,6 +90,41 @@
       "${1:ConstrucName}.prototype.${2:methodName} = function(${3:parameter}){\n\t$0\n};"
     ],
     "description": "cunstructor prototype method"
+  },
+  "log": {
+    "prefix": "log",
+    "body": ["console.log($0)"],
+    "description": "console.log()"
+  },
+  "warn": {
+    "prefix": "warn",
+    "body": ["console.warn($0)"],
+    "description": "console.warn()"
+  },
+  "error": {
+    "prefix": "error",
+    "body": ["console.error($0)"],
+    "description": "console.error()"
+  },
+  "console.log()": {
+    "prefix": "clg",
+    "body": ["console.log(${1:Expression});$0"],
+    "description": "Log Statement"
+  },
+  "console.warn()": {
+    "prefix": "clw",
+    "body": ["console.warn(${1:Expression});$0"],
+    "description": "Warning Statement"
+  },
+  "console.error()": {
+    "prefix": "cle",
+    "body": ["console.error(${1:Expression});$0"],
+    "description": "Error Statement"
+  },
+  "console.dir()": {
+    "prefix": "dir",
+    "body": ["console.dir(${1:Object});$0"],
+    "description": "object Statement"
   },
   "inheritance methods": {
     "prefix": "inh",
