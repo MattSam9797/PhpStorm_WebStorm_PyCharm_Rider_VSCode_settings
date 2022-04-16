@@ -90,14 +90,14 @@
 	"import": {
 		"prefix": "imp",
 		"body": [
-			"import ${1:componentName} from \"${2:library}\";"
+			"import ${1:componentName} from '${2:library}';"
 		],
 		"description": "import the component"
 	},
 	"useState": {
 		"prefix": "st",
 		"body": [
-			"const [${1:name}, set${1/(.*)/${1:/capitalize}/}] = useState(\"${3:nameArgument}\");$0"
+			"const [${1:name}, set${1/(.*)/${1:/capitalize}/}] = useState('${3:nameArgument}');$0"
 		],
 		"description": "declare react State"
 	},
@@ -111,35 +111,35 @@
 	"Query Selector": {
 		"prefix": "dq",
 		"body": [
-			"document.querySelector(\"${1:element}\");\n$0"
+			"document.querySelector('${1:element}');\n$0"
 		],
 		"description": "Selector Query one element"
 	},
 	"Query Selector All": {
 		"prefix": "dqa",
 		"body": [
-			"document.querySelectorAll(\"${1:element}\");\n$0"
+			"document.querySelectorAll('${1:element}');\n$0"
 		],
 		"description": "Selector Query some element"
 	},
 	"id Selector": {
 		"prefix": "di",
 		"body": [
-			"document.getElementById(\"${1:element}\");\n$0"
+			"document.getElementById('${1:element}');\n$0"
 		],
 		"description": "id Selector for one element"
 	},
 	"class Selector": {
 		"prefix": "dc",
 		"body": [
-			"document.getElementsByClassName(\"${1:element}\");\n$0"
+			"document.getElementsByClassName('${1:element}');\n$0"
 		],
 		"description": "class Selector for some element"
 	},
 	"tag Selector": {
 		"prefix": "dt",
 		"body": [
-			"document.getElementsByTagName(\"${1:element}\");\n$0"
+			"document.getElementsByTagName('${1:element}');\n$0"
 		],
 		"description": "tag Selector for some element"
 	},
