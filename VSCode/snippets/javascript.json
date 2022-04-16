@@ -61,27 +61,27 @@
 	},
   "Query Selector": {
     "prefix": "dq",
-    "body": ["document.querySelector(\"${1:element}\");\n$0"],
+    "body": ["document.querySelector('${1:element}');\n$0"],
     "description": "Selector Query one element"
   },
   "Query Selector All": {
     "prefix": "dqa",
-    "body": ["document.querySelectorAll(\"${1:element}\");\n$0"],
+    "body": ["document.querySelectorAll('${1:element}');\n$0"],
     "description": "Selector Query some element"
   },
   "id Selector": {
     "prefix": "di",
-    "body": ["document.getElementById(\"${1:element}\");\n$0"],
+    "body": ["document.getElementById('${1:element}');\n$0"],
     "description": "id Selector for one element"
   },
   "class Selector": {
     "prefix": "dc",
-    "body": ["document.getElementsByClassName(\"${1:element}\");\n$0"],
+    "body": ["document.getElementsByClassName('${1:element}');\n$0"],
     "description": "class Selector for some element"
   },
   "tag Selector": {
     "prefix": "dt",
-    "body": ["document.getElementsByTagName(\"${1:element}\");\n$0"],
+    "body": ["document.getElementsByTagName('${1:element}');\n$0"],
     "description": "tag Selector for some element"
   },
   "prototype": {
